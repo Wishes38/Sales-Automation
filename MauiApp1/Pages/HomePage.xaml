@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.HomePage"
+             BackgroundImageSource="witcher.jpg"
+             >
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Kayıt" Shell.BackgroundColor="Aqua">
+            <MenuFlyoutItem Text="Ürün Ekle" Clicked="MenuFlyoutItem_Clicked"/>
+            <MenuFlyoutItem Text="Ürün Düzenle" Clicked="MenuFlyoutItem_Clicked_1"/>
+            <MenuFlyoutItem Text="Ürün Listele" Clicked="MenuFlyoutItem_Clicked_11"/>
+        </MenuBarItem>
+        <MenuBarItem Text="Satış Yap">
+            <MenuFlyoutItem Text="Satış Yap" Clicked="MenuFlyoutItem_Clicked_8"/>
+        </MenuBarItem>
+        
+        <MenuBarItem Text="Arama Yap" >
+            <MenuFlyoutItem Text="Arama Yap" Clicked="MenuFlyoutItem_Clicked_2"/>
+        </MenuBarItem>
+        <MenuBarItem Text="Ayarlar">
+            <MenuFlyoutItem Text="Kategori Ekle" Clicked="MenuFlyoutItem_Clicked_3"/>
+            <MenuFlyoutItem Text="Marka Ekle" Clicked="MenuFlyoutItem_Clicked_4"/>
+            <MenuFlyoutItem Text="Model Ekle" Clicked="MenuFlyoutItem_Clicked_5"/>
+            <MenuFlyoutItem Text="Kullanıcı Ekle" Clicked="MenuFlyoutItem_Clicked_6"/>
+            <MenuFlyoutItem Text="Müşteri Ekle" Clicked="MenuFlyoutItem_Clicked_7"/>
+        </MenuBarItem>
+        <MenuBarItem Text="Yardım">
+            <MenuFlyoutItem Text="Yardım" Clicked="MenuFlyoutItem_Clicked_9"/>
+        </MenuBarItem>
+        <MenuBarItem Text="Hesaptan Çıkış">
+            <MenuFlyoutItem Text="Hesaptan Çıkış" Clicked="MenuFlyoutItem_Clicked_10"/>
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+  
+
+    <!--<VerticalStackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            --><!-- Menü şeridi --><!--
+            <Grid Grid.Row="0" BackgroundColor="#2196F3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    --><!-- İstediğiniz kadar menü öğesi için sütun ekleyebilirsiniz --><!--
+                </Grid.ColumnDefinitions>
+
+                --><!-- Menü öğeleri --><!--
+                <Button Grid.Column="0" Text="Kayıt" Clicked="Button_Clicked"  BackgroundColor="Transparent" TextColor="White" />
+                <Button Grid.Column="1" Text="Satış Yap" BackgroundColor="Transparent" TextColor="White" />
+                <Button Grid.Column="2" Text="Arama Yap" BackgroundColor="Transparent" TextColor="White" />
+                <Button Grid.Column="3" Text="Ayarlar" BackgroundColor="Transparent" TextColor="White" />
+                <Button Grid.Column="4" Text="Yardım" BackgroundColor="Transparent" TextColor="White" />
+                <Button Grid.Column="5" Text="Hesaptan Çıkış" BackgroundColor="Transparent" TextColor="White" />
+                --><!-- İstediğiniz kadar menü öğesi ekleyebilirsiniz --><!--
+            </Grid>
+
+            --><!-- Sayfa içeriği --><!--
+            <StackLayout Grid.Row="1" x:Name="ContentLayout">
+                --><!-- İçerik burada başlar --><!--
+            </StackLayout>
+        </Grid>
+
+    </VerticalStackLayout>-->
+</ContentPage>

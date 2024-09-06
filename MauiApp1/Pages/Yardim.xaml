@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.Yardim"
+             Title="Yardım"
+             BackgroundImageSource="resim.jpg"
+             >
+    <VerticalStackLayout>
+        <Label 
+            Text="Yardım ve Destek için mail adresimiz: serkanozdemir38080@gmail.com"
+            TextColor="Aqua"
+            FontSize="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

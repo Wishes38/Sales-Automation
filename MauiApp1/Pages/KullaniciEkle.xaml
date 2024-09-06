@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.KullaniciEkle"
+             Title="Kullanıcı Ekle">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="Kullanıcı Bilgileri" FontSize="20"  HorizontalOptions="Center"/>
+
+        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10">
+            <Label Text="Kullanıcı Adı:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Kullanıcı Adı" x:Name="KullaniciAdi" WidthRequest="200"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Orientation="Horizontal" Spacing="10">
+            <Label Text="Kullanıcı Şifre:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Şifre" x:Name="KullaniciSifre" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Orientation="Horizontal" Spacing="10">
+            <Label Text="Ad:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Ad" x:Name="KullaniciIsmi" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+        
+        <StackLayout Grid.Row="4" Orientation="Horizontal" Spacing="10">
+            <Label Text="Soyad:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Soyad" x:Name="KullaniciSoyadi" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="5" Orientation="Horizontal" Spacing="10">
+            <Label Text="Ünvan:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Ünvan" x:Name="KullaniciUnvani" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <Button Text="Ekle" Grid.Row="6" Grid.Column="0" Clicked="Button_Clicked"  WidthRequest="200" HeightRequest="50" HorizontalOptions="End"/>
+    </Grid>
+</ContentPage>

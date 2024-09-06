@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.ModelEkle"
+             Title="Model Ekle">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Model Bilgileri" FontSize="20" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
+
+        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10">
+            <Label Text="Kategori Adı:" WidthRequest="100" VerticalOptions="Center" />
+            <Picker x:Name="KategoriPicker" WidthRequest="200" SelectedIndexChanged="KategoriPicker_SelectedIndexChanged"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Orientation="Horizontal" Spacing="10">
+            <Label Text="Marka Adı:" WidthRequest="100" VerticalOptions="Center" />
+            <Picker x:Name="MarkaPicker" WidthRequest="200" SelectedIndexChanged="MarkaPicker_SelectedIndexChanged"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Orientation="Horizontal" Spacing="10">
+            <Label Text="Model Adı:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Ad" x:Name="ModelAdi" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <Button Text="Ekle" Grid.Row="4" Grid.Column="0" Clicked="Button_Clicked" WidthRequest="200" HeightRequest="50" HorizontalOptions="End"/>
+    </Grid>
+</ContentPage>

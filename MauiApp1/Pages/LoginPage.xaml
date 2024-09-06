@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.LoginPage"
+             Title="Giriş Yap"
+             BackgroundImageSource="vintaj.png">
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Border StrokeThickness="2">
+                <Entry x:Name="UserNameEntry" Placeholder="Kullanıcı ID" PlaceholderColor="White" FontSize="18" HeightRequest="40" WidthRequest="150"/>
+            </Border>
+            <Border StrokeThickness="2">
+                <Entry x:Name="PasswordEntry" Placeholder="Şifre" PlaceholderColor="White" IsPassword="True" FontSize="18" HeightRequest="40" WidthRequest="150" />
+            </Border>
+            
+            <Button Clicked="Button_Clicked" Margin="0,10,0,0" Text="Giriş Yap" FontSize="20" HeightRequest="50" WidthRequest="150" Background="Cyan"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

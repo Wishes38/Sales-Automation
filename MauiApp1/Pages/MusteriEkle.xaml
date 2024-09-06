@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.MusteriEkle"
+             Title="Müşteri Ekle">
+    <ScrollView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Müşteri Bilgileri" FontSize="20"  HorizontalOptions="Center"/>
+
+        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10">
+            <Label Text="Ad:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Ad" x:Name="MusteriAdi" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Orientation="Horizontal" Spacing="10">
+            <Label Text="Soyad:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Soyad" x:Name="MusteriSoyadi" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Orientation="Horizontal" Spacing="10">
+            <Label Text="Telefon No:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Tel" x:Name="MusteriTel" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="4" Orientation="Horizontal" Spacing="10">
+            <Label Text="Adres:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Adres" x:Name="MusteriAdres" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="5" Orientation="Horizontal" Spacing="10">
+            <Label Text="Email:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Email" x:Name="MusteriEmail" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="6" Orientation="Horizontal" Spacing="10">
+            <Label Text="Doğum Tarihi:" WidthRequest="100" VerticalOptions="Center" />
+            <DatePicker x:Name="MusteriDogumTarihi" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <Button Text="Ekle" Grid.Row="7" Grid.Column="0" Clicked="Button_Clicked"  WidthRequest="200" HeightRequest="50" HorizontalOptions="End"/>
+    </Grid>
+    </ScrollView>
+</ContentPage>

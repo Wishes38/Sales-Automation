@@ -1,0 +1,53 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.UrunEkle"
+             Title="Ürün Ekleme Sayfası"
+             
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Ürün Bilgileri" FontSize="20" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
+
+        <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="10">
+            <Label Text="Kategori:" WidthRequest="100" VerticalOptions="Center" />
+            <Picker x:Name="KategoriPicker" SelectedIndexChanged="KategoriPicker_SelectedIndexChanged" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Orientation="Horizontal" Spacing="10">
+            <Label Text="Marka:" WidthRequest="100" VerticalOptions="Center" />
+            <Picker x:Name="MarkaPicker" SelectedIndexChanged="MarkaPicker_SelectedIndexChanged"  WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Orientation="Horizontal" Spacing="10">
+            <Label Text="Model:" WidthRequest="100" VerticalOptions="Center" />
+            <Picker x:Name="ModelPicker" SelectedIndexChanged="ModelPicker_SelectedIndexChanged" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="4" Orientation="Horizontal" Spacing="10">
+            <Label Text="Oluşturulma Tarihi:" WidthRequest="100" VerticalOptions="Center" />
+            <DatePicker x:Name="CreatedDateDatePicker" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="5" Orientation="Horizontal" Spacing="10">
+            <Label Text="Fiyat:" WidthRequest="100" VerticalOptions="Center" />
+            <Entry Placeholder="Price" x:Name="PriceEntry" WidthRequest="200" HeightRequest="50" />
+        </StackLayout>
+
+        <Button Text="Kaydet" Grid.Row="6" Grid.Column="0" Clicked="KaydetButton_Clicked"  WidthRequest="200" HeightRequest="50" HorizontalOptions="End"/>
+    </Grid>
+
+</ContentPage>

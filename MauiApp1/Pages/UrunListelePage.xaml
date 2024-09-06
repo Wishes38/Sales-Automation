@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.UrunListelePage"
+             Title="Ürün Listele">
+    <VerticalStackLayout>
+
+
+        <CollectionView x:Name="CVArama" SelectionMode="Single" Margin="50,0,0,0" BackgroundColor="LimeGreen"
+                VerticalOptions="Start" HorizontalOptions="Start" Opacity="0.7">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="Auto, Auto, Auto, Auto" RowDefinitions="Auto, Auto, Auto, Auto" Padding="50" ColumnSpacing="0" WidthRequest="500" >
+                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding kategoriNameList}"  VerticalOptions="Start"/>
+                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding markaNameList}" />
+                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding modelNameList}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Label x:Name="gelen1"/>
+        <Label x:Name="gelen2"/>
+        <Label x:Name="gelen3"/>
+        <Label x:Name="gelen4"/>
+        <Label x:Name="gelen5"/>
+    </VerticalStackLayout>
+</ContentPage>

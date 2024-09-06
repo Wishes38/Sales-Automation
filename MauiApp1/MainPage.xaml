@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+
+            <RefreshView HorizontalOptions="Start" 
+                         HeightRequest="400"
+                         VerticalOptions="FillAndExpand"
+                         Command="{Binding DuyuruRefreshCommand}"
+                         >
+                
+            
+            <CollectionView x:Name="lstDuyuru" SelectionMode="None" SelectionChanged="lstDuyuru_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.LeftItems>
+                                <SwipeItem 
+                                    Command="{Binding Source={x:Reference lstDuyuru}, Path=BindingContext.DuyuruAyrintiCommand}"
+                                    CommandParameter="{Binding .}"
+                                    BackgroundColor="Green" 
+                                    IconImageSource="vintaj.png" 
+                                    Text="Ayrıntı">
+                                    
+                                </SwipeItem>
+                            </SwipeView.LeftItems>
+                            <SwipeView.RightItems>
+                                <SwipeItem
+                                    Command="{Binding Source={x:Reference lstDuyuru}, Path=BindingContext.DuyuruSilCommand}"
+                                    CommandParameter="{Binding .}"
+                                    Clicked="SwipeItem_Clicked"
+                                    BackgroundColor="Green" 
+                                    IconImageSource="vintaj.png" 
+                                    Text="Sil">
+
+                                </SwipeItem>
+                            </SwipeView.RightItems>
+                        
+                        <Grid ColumnDefinitions="100,Auto" RowDefinitions="80,80">
+                            <Label Text="{Binding Baslik}"></Label>
+                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding Icerik}"></Label>
+                        </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </RefreshView>
+            <!--<ListView x:Name="lstDuyuru">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                            Detail="{Binding Icerik}"
+                            DetailColor="Green"
+                            Text="{Binding Baslik}"
+                            TextColor="Red"
+                            />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
+            
+        <Label Text="Başlık:"></Label>
+        <Entry x:Name="txtBaslik"></Entry>
+        
+        <Button Text="Getir" Clicked="btnLogin_Clicked" ></Button>
+        <Button Text="Kaydet" x:Name="btnKaydet" Clicked="Button_Clicked" ></Button>
+        </StackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>
